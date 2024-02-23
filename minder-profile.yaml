@@ -7,11 +7,6 @@ context:
 alert: "on"
 remediate: "on"
 repository:
-  - name: main-protection
-    type: branch_protection_enabled
-    params:
-      branch: main
-    def: {}
   - name: main-disallow-force-push
     type: branch_protection_allow_force_pushes
     params:
@@ -62,7 +57,5 @@ pull_request:
     def:
       action: summary
       ecosystem_config:
-        - name: npm
-          score: 5
         - name: pypi
           score: 5
